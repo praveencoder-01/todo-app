@@ -41,6 +41,7 @@ function createTodoNode(todo, index) {
 
   const delBtn = document.createElement("button");
   delBtn.textContent = "Delete";
+  delBtn.innerHTML = '<i class="fa-solid fa-trash"></i> Delete';
   delBtn.classList.add("delete-btn");
   delBtn.addEventListener("click", () => {
     todos.splice(index, 1);

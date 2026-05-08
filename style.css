@@ -36,8 +36,22 @@ h1 {
   color: #333;
 }
 
+.input-wrapper {
+  display: flex;
+  align-items: center; /* icon and input side by side */
+  gap: 8px;
+  flex: 1; /* takes remaining space from add button */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+}
+
+.input-wrapper i {
+  color: #aaa; /* subtle grey color */
+}
+
 #todo-input {
-  padding: 0.5rem;
+  padding: 0.75rem;
   padding-left: 0.75rem;
   font-size: 1rem;
   width: 100%;
@@ -52,22 +66,32 @@ h1 {
   display: flex;
   gap: 20px;
   width: 100%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   max-width: 400px;
-
+  background-color: rgb(255, 255, 255);
+  padding: 0.75rem;
+  border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
 #add-btn {
-  padding: 10px 16px;
-  background-color: #6c63ff;
+  padding: 0.75rem 1.2rem;
+  background: linear-gradient(120deg, #6c63ff, #4f8cf6);
+  display: flex;
+  align-items: center; /* vertically centers icon and text */
+  gap: 6px;
   border: none;
   border-radius: 8px;
   color: white;
   cursor: pointer;
 }
 
+#add-btn i {
+  font-size: 1rem;
+}
+
 #add-btn:hover {
-  background-color: #574fd6; /* darker on hover = feels clickable */
+  background: linear-gradient(120deg, #574fd6, #4f8cf6); /* darker on hover = feels clickable */
 }
 
 #todo-list {
