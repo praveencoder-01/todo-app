@@ -30,7 +30,11 @@ function createTodoNode(todo, index) {
     textSpan.style.textDecoration = "line-through";
   }
 
-  textSpan.addEventListener("dblclick", () => {
+  const edtBtn = document.createElement("button");
+  edtBtn.textContent = "Edit";
+  edtBtn.innerHTML = '<i class="fa-solid fa-pen-to-square"></i> ';
+  edtBtn.classList.add("edit-btn");
+  edtBtn.addEventListener("click", () => {
     const newText = prompt("Edit todo:", todo.text);
     if (newText !== null) {
       todo.text = newText.trim();
@@ -51,6 +55,7 @@ function createTodoNode(todo, index) {
 
   li.appendChild(checkbox); // ✅ added
   li.appendChild(textSpan); // ✅ added
+  li.appendChild(edtBtn); // ✅ added
   li.appendChild(delBtn); // ✅ added
   return li;
 }

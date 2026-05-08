@@ -91,7 +91,21 @@ h1 {
 }
 
 #add-btn:hover {
-  background: linear-gradient(120deg, #574fd6, #4f8cf6); /* darker on hover = feels clickable */
+  background: linear-gradient(
+    120deg,
+    #574fd6,
+    #4f8cf6
+  ); /* darker on hover = feels clickable */
+}
+
+.edit-btn {
+  padding: 6px 10px;
+  background-color: rgb(120, 255, 120);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius:50px;
+  cursor: pointer;
+  margin-right: 0.75rem;
 }
 
 #todo-list {
